@@ -1,0 +1,715 @@
+/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700&display=swap');
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+
+/*------------------------------------------ */
+/* Aqui empieza mi proyecto */
+/* Hasta arriba el import de google fonts y luego css del header */
+
+.container {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px 0 20px; 
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo-container {
+  margin: 0;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 60px;
+}
+
+.nav-list a {
+  text-decoration: none;
+}
+
+.header-right-block {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.Sign-list {
+  display: flex;
+  align-items:center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 15px; 
+}
+
+.Sign-list a {
+  text-decoration: none;
+}
+
+/*------------------Imagen principal y estilos de lo demas de hero section-------------------*/
+
+body {
+  margin: 0;
+  background-image: url('/img/woman.png'); 
+  background-repeat: no-repeat;
+  background-position: 98% center; 
+  background-size: 1050px auto;
+  background-attachment: fixed;
+  background-color: #FAF8F5;
+}
+
+/*fonts, hover y lo demas del hero*/
+
+.nav-list a {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #264065;
+}
+
+.btn-signin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #264065;
+}
+
+.btn-signup {
+  background-color: #264065;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #ffffff !important;
+  padding: 10px 24px;
+  border-radius: 20px;
+  font-weight: 600;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-signup::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 30%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0) 100%);
+  transform: skewX(-25deg);
+  transition: left 0s;
+}
+
+.btn-signup:hover {
+  background-color: #004085;
+  box-shadow: 0 6px 15px rgba(0, 86, 179, 0.4);
+}
+
+.btn-signup:hover::after {
+  left: 150%;
+  transition: left 0.6s ease;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  width: 809px;
+  height: 370px;
+  margin-top: 30px;
+  padding-bottom: 0px;
+}
+
+.hero h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 50px;
+  color: #264065;
+  width: 809px;
+  height: 145px;
+  line-height: 1.2;
+  margin: 0;
+  padding-bottom: 0px;
+  letter-spacing: 3px;
+}
+
+.hero p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px; 
+  color: #909090;
+  width: 760px;
+  height: 80px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 0;
+}
+
+.play-icon-button {
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+
+.play-icon-button img {
+  width: 150px;
+  height: 60px;
+  margin: 0;
+  margin-bottom: -35px;  
+  padding: 0;
+  display: block;
+}
+
+.play-icon-button a {
+  margin-left: -35px;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  color: #264065;
+  display: inline-block;
+}
+
+/*Más hovers*/
+
+.hero-buttons > a:first-of-type {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  background-color: #264065;
+  color: #ffffff !important;
+  padding: 10px 24px;
+  border-radius: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-buttons > a:first-of-type::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 30%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
+  transform: skewX(-25deg);
+  transition: left 0s;
+}
+
+.hero-buttons > a:first-of-type:hover {
+  background-color: #004085;
+  box-shadow: 0 6px 15px rgba(0, 86, 179, 0.4);
+}
+
+.hero-buttons > a:first-of-type:hover::after {
+  left: 150%;
+  transition: left 0.6s ease;
+}
+
+.play-icon-button img {
+  width: 150px;
+  height: auto;
+  margin: 0;
+  margin-bottom: -35px;  
+  padding: 0;
+  display: block;
+  -webkit-mask-image: linear-gradient(120deg, #000 0%, #000 100%);
+  mask-image: linear-gradient(120deg, #000 0%, #000 100%);
+}
+
+.play-icon-button:hover img {
+  -webkit-mask-image: linear-gradient(120deg, #000 30%, rgba(255,255,255,0.3) 45%, #000 60%);
+  mask-image: linear-gradient(120deg, #000 30%, rgba(255,255,255,0.3) 45%, #000 60%);
+  -webkit-mask-position: 150px 0;
+  mask-position: 150px 0;
+  -webkit-mask-size: 200% 100%;
+  mask-size: 200% 100%;
+  transition: mask-position 0.6s ease;
+  filter: brightness(1.4);
+}
+
+/*-------------Section de class catagory-numbers y opinions---------------- */
+
+.category-numbers {
+  display: grid;
+  justify-items: center;
+  align-items: center; 
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 12px;
+  column-gap: 20px;
+  justify-items: center;
+  align-items: center;
+  width: 643px;
+  height: 240px;
+  padding: 32px;
+  box-sizing: border-box;
+  margin-right: 0px;
+  margin-top: -60px;
+  margin-left: -15px;
+  background-color: #FEFEFD;
+  border: 2px solid #FEFEFD;
+  border-radius: 10px;
+}
+
+.category-numbers img:nth-of-type(1) { grid-row: 1; grid-column: 1; }
+.category-numbers img:nth-of-type(2) { grid-row: 1; grid-column: 2; }
+.category-numbers img:nth-of-type(3) { grid-row: 1; grid-column: 3; }
+
+.category-numbers div {
+  display: contents;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 35px;
+  color: #264065;
+}
+
+
+
+.category-numbers div:nth-of-type(1) { grid-row: 2; grid-column: 1; }
+.category-numbers div:nth-of-type(2) { grid-row: 2; grid-column: 2; }
+.category-numbers div:nth-of-type(3) { grid-row: 2; grid-column: 3; }
+
+.category-numbers span {
+  display: block;
+  text-align: center;
+  grid-row: 3;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #909090;
+ 
+}
+
+.category-numbers div:nth-of-type(1) span { grid-column: 1; }
+.category-numbers div:nth-of-type(2) span { grid-column: 2; }
+.category-numbers div:nth-of-type(3) span { grid-column: 3; }
+
+.opinions{
+  display: flex;
+  flex-direction: column;
+  width: 345px;
+  min-height: 359px;
+  color: #070D15;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-left: auto;
+  margin-right: -30px;
+  margin-top: -425px; 
+}
+
+.art-1{
+  width: 240px;
+  min-height: 47px;
+  align-self: flex-end;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  border-radius: 15px;
+  padding: 14px;
+  margin-bottom: 45px;
+  font-size: 12px;
+}
+
+.art-1 p:nth-of-type(2){
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #264065
+}
+
+.art-2{
+  width: 240px;
+  min-height: 47px;
+  align-self: flex-start;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  border-radius: 15px;
+  padding: 14px;
+  font-size: 12px;
+}
+
+.art-2 p:nth-of-type(2) {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #264065
+}
+
+/*-------------Responsive---------------- */
+
+/* -------------------------------------------------------------------------- */
+/* MEDIAS QUERIES PARA CELULARES Y TABLETAS                  */
+/* -------------------------------------------------------------------------- */
+
+@media (max-width: 992px) {
+  body {
+    background-image: none;
+    background-color: #FAF8F5;
+  }
+
+  .main-header {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .nav-list {
+    gap: 25px; 
+  }
+
+  .header-right-block {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero {
+    width: 100%;
+    height: auto;
+    align-items: center; 
+    text-align: center;
+    margin-top: 40px;
+    background-image: url('/img/woman.png');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+    padding-bottom: 300px; 
+  }
+
+  .hero h1 {
+    width: 100%;
+    height: auto;
+    font-size: 36px; 
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+  }
+
+  .hero p {
+    width: 100%;
+    height: auto;
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+
+  .hero-buttons {
+    flex-direction: column; 
+    gap: 15px;
+    margin-bottom: 30px; 
+  }
+
+  .category-numbers {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 40px; 
+    padding: 20px;
+    grid-template-columns: repeat(3, 1fr); 
+    column-gap: 10px;
+    row-gap: 15px;
+  }
+
+  .category-numbers img:nth-of-type(1) { grid-row: 1; grid-column: 1; }
+  .category-numbers img:nth-of-type(2) { grid-row: 1; grid-column: 2; }
+  .category-numbers img:nth-of-type(3) { grid-row: 1; grid-column: 3; }
+
+  .category-numbers div:nth-of-type(1) { grid-row: 2; grid-column: 1; display: block; text-align: center; }
+  .category-numbers div:nth-of-type(2) { grid-row: 2; grid-column: 2; display: block; text-align: center; }
+  .category-numbers div:nth-of-type(3) { grid-row: 2; grid-column: 3; display: block; text-align: center; }
+
+  .category-numbers span {
+    font-size: 13px; 
+  }
+  .category-numbers div:nth-of-type(1) span { grid-row: 3; grid-column: 1; }
+  .category-numbers div:nth-of-type(2) span { grid-row: 3; grid-column: 2; }
+  .category-numbers div:nth-of-type(3) span { grid-row: 3; grid-column: 3; }
+
+  .opinions {
+    width: 100%;
+    min-height: auto;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 40px; 
+    align-items: center; 
+    gap: 20px;
+  }
+
+  .art-1, .art-2 {
+    width: 100%;
+    max-width: 300px; 
+    min-height: auto;
+    align-self: center; 
+    margin-bottom: 0;
+  }
+}
+
