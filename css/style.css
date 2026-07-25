@@ -310,7 +310,7 @@ textarea {
 
 body {
   margin: 0;
-  background-image: url('/img/woman.png'); 
+  background-image: url('../img/woman.png'); 
   background-repeat: no-repeat;
   background-position: 98% center; 
   background-size: 1050px auto;
