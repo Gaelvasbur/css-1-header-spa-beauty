@@ -12,4 +12,4 @@ You can view the live design here:
 - **SVG** (Vector graphics used for icons)
 
 ---
-📌 *Educational project purposes only.*
+📌 *For educational purposes only.*
