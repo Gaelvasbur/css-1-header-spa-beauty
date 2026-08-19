@@ -12,4 +12,4 @@ You can view the live design here:
 - **SVG** (Vector graphics used for icons)
 
 ---
-📌 *For educational purposes only.*
+📌 *Developed for educational purposes at Conquer Blocks.*
