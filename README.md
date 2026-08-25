@@ -4,7 +4,7 @@ A CSS project focused on designing and developing a modern header and hero secti
 
 ## 🌐 Project Link
 You can view the live design here: 
-👉 https://gaelvasbur.github.io/CSS-Tarea-entregable-1---Header-Spa-Beauty/
+👉 https://gaelvasbur.github.io/css-1-header-spa-beauty/
 
 ## 🛠️ Technologies Used
 - **HTML5** (Semantic structure)
