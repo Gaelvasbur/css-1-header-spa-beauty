@@ -11,5 +11,3 @@ You can view the live design here:
 - **CSS3** (Layout, styling, and interactive hover effects)
 - **SVG** (Vector graphics used for icons)
 
----
-📌 *Developed for educational purposes at Conquer Blocks.*
